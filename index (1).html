@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Pacote Presença Digital — identidade visual e página da marca para o seu negócio</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=Instrument+Sans:wght@400;500;600&display=swap">
+<style>
+:root{--bg:#FBF7EC;--ink:#000;--soft:#4a4636;--y:#FFC21A;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#14110a;--ink:#FBF7EC;--soft:#cfc8b0}}
+:root[data-theme="dark"]{--bg:#14110a;--ink:#FBF7EC;--soft:#cfc8b0}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 1.0625rem/1.6 "Instrument Sans",system-ui,sans-serif;overflow-x:hidden}
+h1,h2,h3{font-family:"Bricolage Grotesque","Instrument Sans",system-ui,sans-serif;line-height:1.02;margin:0;letter-spacing:-.02em}
+h1{font-size:clamp(2.4rem,8vw,4.9rem);font-weight:800}
+h2{font-size:clamp(2rem,5.5vw,3.4rem);font-weight:800;max-width:17ch}
+h3{font-size:1.4rem;font-weight:700;line-height:1.15}
+p{margin:0}a{color:inherit}
+.wrap{max-width:1120px;margin:0 auto;padding:0 clamp(1.25rem,5vw,2.5rem)}
+section,footer{padding:clamp(3.5rem,9vw,7rem) 0}
+.y{background:var(--y);color:#000}
+.k{background:#000;color:#FBF7EC}
+.btn{display:inline-block;background:#000;color:#FBF7EC;font:600 1rem "Instrument Sans",system-ui,sans-serif;padding:.95rem 1.5rem;border-radius:999px;text-decoration:none;border:2px solid #000;transition:transform .15s}
+.btn:hover{transform:translateY(-2px)}
+.btn:focus-visible,a:focus-visible,summary:focus-visible{outline:3px solid #FFC21A;outline-offset:3px}
+.k .btn{background:var(--y);color:#000;border-color:var(--y)}
+.y .btn:focus-visible,.y summary:focus-visible{outline-color:#000}
+.small{font-size:.9rem;color:var(--soft)}
+header{padding:1.1rem 0;border-bottom:2px solid var(--ink)}
+header .wrap{display:flex;justify-content:space-between;align-items:center;gap:1rem}
+.brand{font:800 1.1rem "Bricolage Grotesque",sans-serif;text-decoration:none}
+header .btn{padding:.6rem 1.1rem;font-size:.92rem}
+.hero{padding-top:clamp(2.5rem,7vw,5rem);overflow:hidden}
+.hero .wrap{display:grid;gap:2.5rem;align-items:center}
+.hero p.lead{font-size:1.2rem;max-width:36ch;margin:1.5rem 0 2rem}
+.hero .small{margin-top:1rem}
+#sf{width:min(88vw,440px);height:auto;justify-self:center;animation:spin 60s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+@media (min-width:860px){.hero .wrap{grid-template-columns:1.15fr .85fr}#sf{width:min(44vw,500px);margin-right:-4rem}}
+@media (prefers-reduced-motion:reduce){#sf{animation:none}.btn{transition:none}}
+.steps{list-style:none;margin:2.5rem 0 0;padding:0;display:grid;counter-reset:s}
+.steps li{counter-increment:s;display:grid;grid-template-columns:3.2rem 1fr;gap:1rem;padding:1.4rem 0;border-top:2px solid #000}
+.steps li::before{content:counter(s);font:800 2.4rem/1 "Bricolage Grotesque",sans-serif}
+.steps p{max-width:42ch;margin-top:.3rem}
+@media (min-width:860px){.steps{grid-template-columns:repeat(4,1fr);gap:2rem}.steps li{grid-template-columns:1fr}}
+.deps{display:grid;margin-top:3rem}
+.dep{padding:1.8rem 0;border-top:1px solid rgba(251,247,236,.3)}
+.dep p{margin-top:.6rem;max-width:44ch;color:#d9d2bb}
+@media (min-width:760px){.deps{grid-template-columns:1fr 1fr;column-gap:4rem}}
+.ex{display:grid;gap:2rem;margin-top:2.5rem}
+.panel{border:2px solid var(--ink);border-radius:18px;padding:1.5rem;background:var(--bg)}
+.panel h3{margin-bottom:.8rem}
+.panel ul{margin:0;padding-left:1.1rem}
+.panel li{margin:.55rem 0}
+.yes{background:var(--y);color:#000;border-color:#000}
+@media (min-width:860px){.ex{grid-template-columns:1fr 1fr}}
+.plans{margin-top:2.5rem;border-top:2px solid #000}
+.plan{display:grid;gap:.4rem 2rem;padding:1.6rem 0;border-bottom:2px solid #000}
+.plan .price{font:800 1.8rem "Bricolage Grotesque",sans-serif}
+@media (min-width:760px){.plan{grid-template-columns:220px 1fr 130px 170px;align-items:center}}
+.faq{margin-top:2.5rem;border-top:2px solid var(--ink)}
+details{border-bottom:2px solid var(--ink);padding:1.2rem 0}
+summary{cursor:pointer;font:700 1.2rem "Bricolage Grotesque",sans-serif}
+details p{margin-top:.7rem;max-width:56ch}
+.final .btn{margin-top:2rem}
+.total{margin-top:1.6rem;font-size:1.15rem}
+.plan .btn{justify-self:start;margin-top:.6rem}
+@media (min-width:760px){.plan .btn{margin-top:0;justify-self:end}}
+.btn.off{opacity:.55;pointer-events:none}
+footer{padding:2rem 0;border-top:1px solid rgba(251,247,236,.3)}
+footer .wrap{display:flex;flex-wrap:wrap;gap:1rem 2rem;justify-content:space-between}
+footer a{margin-right:1.2rem}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <a class="brand" href="#topo">Bruna Lanna Design</a>
+    <a class="btn" href="#comprar">Quero meu pacote</a>
+  </div>
+</header>
+
+<main id="topo">
+<section class="hero">
+  <div class="wrap">
+    <div>
+      <h1>Seu negócio com identidade visual e página da marca feitas para você.</h1>
+      <p class="lead">Você compra, preenche um formulário e recebe tudo pronto. Sem reunião e sem ficar trocando mensagem.</p>
+      <a class="btn" href="#comprar">Quero meu pacote</a>
+      <p class="small">Pagamento online. Entrega por link, no seu e-mail.</p>
+    </div>
+    <svg id="sf" viewBox="-100 -100 200 200" role="img" aria-label="Girassol"></svg>
+  </div>
+</section>
+
+<section class="y" aria-labelledby="como">
+  <div class="wrap">
+    <h2 id="como">Quatro passos, nenhum deles é uma conversa.</h2>
+    <ol class="steps">
+      <li><div><h3>Compre o pacote</h3><p>O pagamento é online e a confirmação chega por e-mail.</p></div></li>
+      <li><div><h3>Preencha o formulário</h3><p>Em cerca de 10 minutos você envia sua marca, seus produtos, suas referências e suas fotos.</p></div></li>
+      <li><div><h3>Espere a entrega</h3><p>O prazo está na confirmação. Você não precisa cobrar nem lembrar ninguém.</p></div></li>
+      <li><div><h3>Receba e peça um ajuste</h3><p>Tudo chega numa pasta organizada. Se algo precisar mudar, você pede por um formulário.</p></div></li>
+    </ol>
+  </div>
+</section>
+
+<section class="k" aria-labelledby="dentro">
+  <div class="wrap">
+    <h2 id="dentro">O que você pode contratar.</h2>
+    <div class="deps">
+      <div class="dep"><h3>Identidade visual</h3><p>Logo, paleta de cores, tipografia, capas de destaques e um manual da marca para você usar sempre igual.</p></div>
+      <div class="dep"><h3>Página da marca</h3><p>Uma página online com quem você é, o que oferece, suas fotos e os botões de contato, para você colocar no link da bio.</p></div>
+      <div class="dep"><h3>Pacote de redes sociais</h3><p>12 posts prontos na identidade da sua marca, nova ou já existente. Compre junto com o pacote completo ou separado.</p></div>
+      <div class="dep"><h3>Uma rodada de ajustes</h3><p>Depois da entrega, você pede as mudanças pelo formulário de ajustes e recebe a versão final.</p></div>
+    </div>
+  </div>
+</section>
+
+<section aria-labelledby="escopo">
+  <div class="wrap">
+    <h2 id="escopo">O que está e o que não está no pacote.</h2>
+    <div class="ex">
+      <div class="panel yes">
+        <h3>Incluso</h3>
+        <ul>
+          <li>Identidade visual completa e manual da marca.</li>
+          <li>Página da marca no ar.</li>
+          <li>Pacote de 12 posts, se você comprar.</li>
+          <li>Uma rodada de ajustes por formulário.</li>
+        </ul>
+      </div>
+      <div class="panel">
+        <h3>Não incluso</h3>
+        <ul>
+          <li>Atendimento por WhatsApp ou chamada.</li>
+          <li>Rodadas de ajustes ilimitadas.</li>
+          <li>Postar e gerenciar o seu Instagram.</li>
+          <li>Fotografar os seus produtos.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="y" id="comprar" aria-labelledby="planos">
+  <div class="wrap">
+    <h2 id="planos">Escolha o que você precisa.</h2>
+    <p style="margin-top:1rem;max-width:46ch">Pagamento único em cada produto. Compre o pacote completo ou só a parte que precisa.</p>
+    <div class="plans">
+      <div class="plan"><h3>Pacote completo</h3><p>Identidade visual completa, manual da marca e página da marca personalizada.</p><p class="price">R$ 597</p><a class="btn" data-p="completo" href="#comprar">Comprar</a></div>
+      <div class="plan"><h3>Só a identidade</h3><p>Logo, paleta de cores, tipografia e manual da marca.</p><p class="price">R$ 397</p><a class="btn" data-p="identidade" href="#comprar">Comprar</a></div>
+      <div class="plan"><h3>Só a página</h3><p>Página da marca personalizada para você colocar no link da bio.</p><p class="price">R$ 500</p><a class="btn" data-p="pagina" href="#comprar">Comprar</a></div>
+      <div class="plan"><h3>Redes sociais</h3><p>12 posts prontos na identidade da sua marca.</p><p class="price">R$ 149</p><a class="btn" data-p="redes" href="#comprar">Comprar</a></div>
+    </div>
+    <p class="total">O pacote completo custa R$ 300 a menos do que a identidade e a página compradas separadas. Pacote completo + 12 posts: <strong>R$ 746</strong>.</p>
+  </div>
+</section>
+
+<section aria-labelledby="faq">
+  <div class="wrap">
+    <h2 id="faq">Perguntas frequentes.</h2>
+    <div class="faq">
+      <details><summary>Quanto tempo leva para receber?</summary><p>O prazo de entrega está na confirmação da compra e conta a partir do envio do formulário preenchido.</p></details>
+      <details><summary>Como peço um ajuste?</summary><p>Pelo formulário de ajustes, que chega junto com a entrega. Você tem uma rodada incluída.</p></details>
+      <details><summary>Posso comprar só uma parte?</summary><p>Sim. A identidade visual, a página da marca e o pacote de 12 posts também são vendidos separados.</p></details>
+      <details><summary>Preciso ter fotos do meu trabalho?</summary><p>Ajuda muito, mas não é obrigatório para começar. O formulário explica quais fotos enviar.</p></details>
+      <details><summary>Como falo com vocês se tiver dúvida?</summary><p>Por e-mail. A resposta chega dentro do prazo informado na confirmação.</p></details>
+    </div>
+  </div>
+</section>
+
+<section class="k final" aria-labelledby="final">
+  <div class="wrap">
+    <h2 id="final">Compre hoje e preencha o formulário em 10 minutos.</h2>
+    <a class="btn" href="#comprar">Quero meu pacote</a>
+  </div>
+</section>
+</main>
+
+<footer class="k">
+  <div class="wrap">
+    <p>© 2026 Bruna Lanna Design</p>
+    <p><a href="#topo">Política de privacidade</a><a href="#topo">Termos de uso</a></p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var s='',i,n,r,a;
+  for(i=0;i<14;i++)s+='<ellipse cx="0" cy="-72" rx="13" ry="30" fill="#F2A900" stroke="#000" stroke-width="2" transform="rotate('+(i*360/14)+')"/>';
+  for(i=0;i<14;i++)s+='<ellipse cx="0" cy="-58" rx="13" ry="30" fill="#FFC21A" stroke="#000" stroke-width="2" transform="rotate('+(i*360/14+180/14)+')"/>';
+  s+='<circle r="36" fill="#000"/>';
+  for(n=1;n<80;n++){r=3.8*Math.sqrt(n);a=n*137.508*Math.PI/180;s+='<circle cx="'+(r*Math.cos(a)).toFixed(1)+'" cy="'+(r*Math.sin(a)).toFixed(1)+'" r="1.3" fill="#FFC21A"/>';}
+  document.getElementById('sf').innerHTML=s;
+})();
+(function(){
+  /* Cole aqui os links de compra do Kiwify. Deixe '' enquanto não tiver o link: o botão mostra "Em breve". */
+  var LINKS={completo:'https://pay.kiwify.com.br/JJQMHTQ',identidade:'',pagina:'',redes:''};
+  document.querySelectorAll('a.btn[href="#comprar"]:not([data-p])').forEach(function(a){if(LINKS.completo)a.href=LINKS.completo});
+  document.querySelectorAll('a.btn[data-p]').forEach(function(a){var l=LINKS[a.dataset.p];if(l){a.href=l}else{a.removeAttribute('href');a.setAttribute('aria-disabled','true');a.textContent='Em breve';a.classList.add('off')}});
+})();
+</script>
+</body>
+</html>
